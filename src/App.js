@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+
+//-----Components------//
+import Home from './containers/Home/index'
+import Itemdetails from './containers/Itemdetails/itemdetails'
+import Sellitem from './containers/SelItem/Sellitem';
+//-----Components------//
+
+//----React Router Dom----//
+import {
+BrowserRouter as Router,
+Switch,
+Route
+} from 'react-router-dom'
+//----React Router Dom----//
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+    
+      <div className="app">
+        <Switch>
+          <Route exact path={`/Item/:Category/:title/:id`} component={Itemdetails}>
+            <Itemdetails />
+          </Route> 
+          <Route exact path="/Sellitem" component={Sellitem}>
+            <Sellitem />
+          </Route> 
+         <Route exact path="/" component={Home}>
+            <Home />
+          </Route>
+          <Route component={Error} />
+        </Switch>
+      </div>
+    </Router> 
   );
 }
+
+
+
 
 export default App;

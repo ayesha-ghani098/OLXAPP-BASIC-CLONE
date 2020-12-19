@@ -1,0 +1,23 @@
+
+
+.card__box > .Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* .card__box_heading > h2 {
+
+    font-size: 32px;
+    color: black;
+    margin-left: 20px;
+   
+    text-align: left;
+}  */
+
+.card__box_heading{
+    margin-top: 20px;
+    margin-bottom: 20px;
+ display: flex;
+    justify-content: center;
+}

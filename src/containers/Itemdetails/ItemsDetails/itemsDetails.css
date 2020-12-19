@@ -1,0 +1,97 @@
+.item-img {
+  height: 350px;
+  background-color: black;
+}
+.item-img > img {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+}
+.col-sm-8 {
+  padding: 2px;
+  border: 2px solid rgb(138, 135, 135);
+  margin-bottom: 20px;
+  border-radius: 4px;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+.item-details {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-bottom: 1px solid rgb(138, 135, 135);
+}
+.item-desc {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 10px;
+}
+.date-price {
+  border: 2px solid rgb(138, 135, 135);
+  padding: 5px;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+.col-sm-4{
+    margin-top: 10px;
+}
+.item-pprice {
+  display: flex;
+ 
+}
+.item-pprice > h3 {
+  padding-top: 10px;
+
+}
+.detail__location {
+  float: left;
+  padding-left: 20px;
+}
+.detail__timestamp {
+  float: right;
+  padding-right: 20px;
+}
+.item-sell-desc {
+  border: 2px solid rgb(138, 135, 135);
+  padding: 10px;
+  padding-left: 50px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+.item-sell-desc > h2 {
+}
+.item-sell-desc > .user {
+  display: flex;
+}
+.item-sell-desc > .details-btn {
+  display: block;
+  margin-bottom: 5px;
+  background-color: blue;
+  color: white;
+  font-size: 15px;
+  font-weight: 400px;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 80%;
+}
+
+.map {
+  height: 200px;
+  display: flex;
+  border: 2px solid rgb(138, 135, 135);
+  border-radius: 4px;
+  height: 300px;
+}
+
+.user>img{
+    width: 50px;
+    height: 50px;
+   margin-left: 10px;
+   border-radius: 25px;
+   margin-bottom: 3px;
+}
+.user> h5{
+margin-top: 10px;
+  margin-left: -70px;
+}

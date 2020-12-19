@@ -1,0 +1,46 @@
+.login-logo{
+    display: flex;
+    justify-content: center;
+}
+.login-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.login-button>button{
+    background-color: rgb(85, 85, 196);
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+.login-button>button:hover{
+    opacity: 0.8;
+    outline: none;
+
+}
+.login-button>button:focus{
+    outline: none;
+
+}
+.login-h1{
+    display: flex;
+    justify-content: center;
+}
+.login-h1>h5{
+font-size: 15px;
+}
+.login-h2{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+ 
+}
+.login-h2>h6{
+    font-size: 17px;
+}
+#closebtn{
+    background-color: rgb(85, 85, 196);
+}
