@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./Cardbox.css";
 import Cards from "./Cards/index";
-import db from "../../../config/firebase";
+import db, { storage } from "../../../config/firebase";
 
 function CardBox() {
+  // --------SellItem State---------//
+
   const [sellitem, setSellitem] = useState([]);
+
+  // --------Get Data from Database--------//
 
   useEffect(() => {
     db.collection("sellitem")
@@ -18,6 +22,12 @@ function CardBox() {
         )
       );
   }, []);
+
+  //   const getphoto=(imagephoto)=>{
+  // storage.ref("images").child(imagephoto.name).getDownloadURL().then(url=>{
+  //   console.log("url",url);
+  // })
+  //   }
 
   return (
     <div className="container">

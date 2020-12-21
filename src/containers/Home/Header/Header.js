@@ -1,22 +1,21 @@
 import "./Header.css";
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import logo from "../../../assets/Olx_logo.png";
 import AddIcon from "@material-ui/icons/Add";
 import SearchIcon from "@material-ui/icons/Search";
 import Button from "@material-ui/core/Button";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { Link , useHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
 import NotificationsNoneOutlinedIcon from "@material-ui/icons/NotificationsNoneOutlined";
 import { Avatar, IconButton } from "@material-ui/core";
-import Login from '../../Login/Login'
+import Login from "../../Login/Login";
 
 function Header() {
   const userData = useSelector((state) => state.user);
   const { user } = userData;
   const [modalShow, setModalShow] = useState(false);
-  const history = useHistory();
 
   return (
     <nav className="header no-gutters">
@@ -46,11 +45,11 @@ function Header() {
         </div>
       </div>
       <div className="header__right">
-        <span  className="login" >
+        <span className="login">
           {!user ? (
             <div>
-            <button onClick={() => setModalShow(true)}>Login</button>
-            <Login show={modalShow} onHide={() => setModalShow(false)} />
+              <button onClick={() => setModalShow(true)}>Login</button>
+              <Login show={modalShow} onHide={() => setModalShow(false)} />
             </div>
           ) : (
             <>

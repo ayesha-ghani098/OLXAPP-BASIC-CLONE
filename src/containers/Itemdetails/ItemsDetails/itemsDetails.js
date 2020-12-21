@@ -3,26 +3,27 @@ import "./itemsDetails.css";
 import ShareIcon from "@material-ui/icons/Share";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import { IconButton } from "@material-ui/core";
-import { Map, GoogleApiWrapper } from 'google-maps-react';
-
+import { Map, GoogleApiWrapper } from "google-maps-react";
 
 const mapStyles = {
-  width: '100%',
-  height: '100%'
+  width: "100%",
+  height: "100%",
 };
 
-function ItemsDetails({
-  id,
-  image,
-  name,
-  location,
-  description,
-  price,
-  timestamp,
-  userImg,
-  userName,
-},props) 
-{
+function ItemsDetails(
+  {
+    id,
+    image,
+    name,
+    location,
+    description,
+    price,
+    timestamp,
+    userImg,
+    userName,
+  },
+  props
+) {
   return (
     <div className="container">
       <div className="row">
@@ -69,17 +70,15 @@ function ItemsDetails({
             <button className="details-btn">Make an Offer</button>
           </div>
           <div className="map">
-          <Map
-        google={props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={
-          {
-            lat: -1.2884,
-            lng: 36.8233
-          }
-        }
-      />
+            <Map
+              google={props.google}
+              zoom={14}
+              style={mapStyles}
+              initialCenter={{
+                lat: -1.2884,
+                lng: 36.8233,
+              }}
+            />
           </div>
         </div>
       </div>

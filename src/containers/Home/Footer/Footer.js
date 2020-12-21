@@ -1,17 +1,18 @@
 import "./Footer.css";
-import { Divider, IconButton } from "@material-ui/core";
+import { IconButton } from "@material-ui/core";
+
+// --------Footer icons--------------//
 
 import footerimg from "../../../assets/footerimg.png";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import TwitterIcon from "@material-ui/icons/Twitter";
+import YouTubeIcon from "@material-ui/icons/YouTube";
 
 import appstore2 from "../../../assets/appstore2.webp";
 import playstore2 from "../../../assets/playstore2.webp";
 import appstore from "../../../assets/appstore.webp";
 import playstore from "../../../assets/playstore.webp";
-
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import YouTubeIcon from "@material-ui/icons/YouTube";
 
 function Footer() {
   return (

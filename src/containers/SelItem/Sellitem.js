@@ -4,7 +4,7 @@ import Logo from "../../assets/olx.png";
 import { Link, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import db from "../../config/firebase";
-import {storage} from '../../config/firebase';
+import { storage } from "../../config/firebase";
 import firebase from "firebase";
 import Login from "../Login/Login";
 
@@ -19,58 +19,48 @@ function Sell() {
   const [itemPrice, setitemPrice] = useState("");
   const [address, setaddress] = useState("");
   const [itemDescription, setitemDescription] = useState("");
-const [image, setimage] = useState("");
+  const [image, setimage] = useState("");
 
-  const handleSubmit=(e)=>{
+  const handleSubmit = (e) => {
     //   cancel default events
-      e.preventDefault();
+    e.preventDefault();
 
-      db.collection("sellitem").add({
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-          category: itemCategory,
-          name: itemName,
-          price: itemPrice,
-          image: image.name,
-          description: itemDescription,
-          location: address,
-          username: user.displayName,
-          userimage: user.photoURL 
-      })
+    db.collection("sellitem").add({
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      category: itemCategory,
+      name: itemName,
+      price: itemPrice,
+      image: image,
+      description: itemDescription,
+      location: address,
+      username: user.displayName,
+      userimage: user.photoURL,
+    });
 
-      // const uploadphoto = storage.ref(`images/${image.name}`).put(image);
-      // uploadphoto.on(
-      //   "state_changed",
-      //   snapshot => {},
-      //   error => {
-      //     console.log(error)
-      //   },
-      // )
-     
+    // const uploadphoto = storage.ref(`images/${image.name}`).put(image);
+    // uploadphoto.on(
+    //   "state_changed",
+    //   snapshot => {},
+    //   error => {
+    //     console.log(error)
+    //   },
+    // )
 
-      setitemName("");
-      setaddress("");
-      setitemDescription("");
-      setitemPrice("");
-      setitemCategory("");
-      setimage("");
+    setitemName("");
+    setaddress("");
+    setitemDescription("");
+    setitemPrice("");
+    setitemCategory("");
+    setimage("");
 
-      history.push("/");
-
-      console.log("image",image);
-
+    history.push("/");
   };
-
-
-  
 
   // const handleimageitem = (e)=>{
   //   if(e.target.files[0]){
   //     setimage(e.target.files[0]);
   //   }
   // }
-  
-
-
 
   return (
     <div className="container">
@@ -110,10 +100,10 @@ const [image, setimage] = useState("");
                   <label>Item Name</label>
                 </div>
                 <div className="item-name-input">
-                  <input 
-                  placeholder="Enter Name"
-                  value={itemName}
-                  onChange={(e)=> setitemName(e.target.value)}
+                  <input
+                    placeholder="Enter Name"
+                    value={itemName}
+                    onChange={(e) => setitemName(e.target.value)}
                   />
                 </div>
                 <div className="item-price">
@@ -121,31 +111,31 @@ const [image, setimage] = useState("");
                 </div>
                 <div className="item-price-input">
                   <input
-                   placeholder="Enter Price"
-                   value={itemPrice}
-                   onChange={(e)=> setitemPrice(e.target.value)}
-                    />
+                    placeholder="Enter Price"
+                    value={itemPrice}
+                    onChange={(e) => setitemPrice(e.target.value)}
+                  />
                 </div>
                 <div className="item-image">
                   <label>Item Image</label>
                 </div>
                 <div className="item-image-input">
                   <input
-                  // type="file"
-                   placeholder="Upload Image"
-                   value={image}
-                  //  onChange={handleimageitem}
-                  onChange={(e)=>setimage(e.target.value)}
-                  /> 
+                    // type="file"
+                    placeholder="Upload Image"
+                    value={image}
+                    //  onChange={handleimageitem}
+                    onChange={(e) => setimage(e.target.value)}
+                  />
                 </div>
                 <div className="item-location">
                   <label>Location</label>
                 </div>
                 <div className="item-location-input">
                   <input
-                     placeholder="Where located?"
-                     value={address}
-                     onChange={(e)=> setaddress(e.target.value)}
+                    placeholder="Where located?"
+                    value={address}
+                    onChange={(e) => setaddress(e.target.value)}
                   />
                 </div>
                 <div className="item-description">
@@ -153,16 +143,21 @@ const [image, setimage] = useState("");
                 </div>
                 <div className="item-description-text">
                   <textarea
-                     placeholder="Write details of item"
-                     value={itemDescription}
-                     onChange={(e)=> setitemDescription(e.target.value)} />
+                    placeholder="Write details of item"
+                    value={itemDescription}
+                    onChange={(e) => setitemDescription(e.target.value)}
+                  />
                 </div>
                 <div className="ad-submit-button">
-                    <Link to="/" id="submitt"> Cancel</Link>
-                    <button onClick={handleSubmit} id="submitt">Post Ad</button>
+                  <Link to="/" id="submitt">
+                    {" "}
+                    Cancel
+                  </Link>
+                  <button onClick={handleSubmit} id="submitt">
+                    Post Ad
+                  </button>
                 </div>
               </form>
-           
             </div>
           </div>
         </>

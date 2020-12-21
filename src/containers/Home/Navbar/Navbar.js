@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+
+// ------installed & imported Navbar from MDB-------//
+
 import {
   MDBNavbar,
   MDBNavbarNav,
@@ -12,7 +16,8 @@ import {
   MDBDropdownItem,
   MDBIcon,
 } from "mdbreact";
-import { BrowserRouter as Router } from "react-router-dom";
+
+// ------Navbar Compoenent-------//
 
 class NavbarPage extends Component {
   state = {
@@ -41,7 +46,11 @@ class NavbarPage extends Component {
                 <MDBDropdown>
                   <MDBDropdownToggle style={{ color: "black" }} nav caret>
                     <div
-                      style={{ color: "black",fontWeight:"500", marginRight: "10px" }}
+                      style={{
+                        color: "black",
+                        fontWeight: "500",
+                        marginRight: "10px",
+                      }}
                       className="d-none d-md-inline"
                     >
                       All Categories
