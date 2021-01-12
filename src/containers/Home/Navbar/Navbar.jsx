@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import './navbar.css';
+import  {VscMenu} from 'react-icons/vsc'
 
 // ------installed & imported Navbar from MDB-------//
 
@@ -36,10 +38,16 @@ class NavbarPage extends Component {
           expand="md"
           style={{ marginBottom: "-5px" }}
         >
-          <MDBNavbarToggler
-            style={{ backgroundColor: "blue", color: "white" }}
+          {/* <MDBNavbarToggler
+           className="toggle"
             onClick={this.toggleCollapse}
-          />
+          /> */}
+    <div className="navbar-mob">
+      <marquee width="90%" direction="right" height="auto">
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore lab
+</marquee>
+            <VscMenu className="toggle"  onClick={this.toggleCollapse} />
+    </div>
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav left>
               <MDBNavItem style={{ marginRight: "10px" }}>
